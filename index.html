@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Angel Zarate Piña - Portafolio Personal</title>
-    <!-- Importamos Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     <style>
@@ -133,16 +132,18 @@
             align-items: center;
             justify-content: space-between;
             gap: 2rem;
-            min-height: 100vh;
+            flex-wrap: wrap;
         }
 
         .inicio-contenido {
             flex: 2;
+            min-width: 300px;
         }
         
         .inicio-foto {
             flex: 1;
             text-align: center;
+            min-width: 300px;
         }
 
         .inicio-foto img {
@@ -205,6 +206,19 @@
             transform: translateY(-3px);
         }
 
+        /* --- Contenedor YouTube --- */
+        .youtube-container {
+            width: 100%;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .youtube-container iframe {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
         /* --- Sección Hobbies --- */
         .hobbies-grid {
             display: grid;
@@ -237,6 +251,24 @@
         }
         .hobby-card-content h3 {
             color: var(--color-texto-principal);
+        }
+
+        /* --- Contenedor TikTok --- */
+        .videos-container {
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .videos-container h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .tiktok-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
         /* --- Sección Criptografía --- */
@@ -320,13 +352,10 @@
                 </ul>
 
                 <div class="enlaces-cta">
-                    <!-- Enlace al CV (Google Drive) -->
-                    <a href="https://drive.google.com/drive/u/1/folders/1zhuLGcKOYYn58X0gKpSm-4Ey1Afd-c8n" class="btn" target="_blank" rel="noopener noreferrer">
+                    <a href="cv.pdf" download="CV_Luis_Zarate_Pina.pdf" class="btn">
                         Descargar CV <i class="fa-solid fa-file-arrow-down"></i>
                     </a>
                     
-                    <!-- Enlace a la Llave Pública (Archivo local generado) -->
-                    <!-- NOTA: Asegúrate de subir 'clave_publica.pem' a GitHub junto con este archivo -->
                     <a href="clave_publica.pem" download="clave_publica_luis.pem" class="btn">
                         Mi Llave Pública <i class="fa-solid fa-key"></i>
                     </a>
@@ -347,6 +376,11 @@
 
             <div class="inicio-foto">
                 <img src="tu-foto.jpg" alt="Foto de Luis Angel Zarate Piña">
+            </div>
+
+            <div class="youtube-container">
+                <h3>Acerca de Mí (Presentación)</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TU_ID_DE_VIDEO_AQUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
         </section>
@@ -380,6 +414,14 @@
                 </div>
 
             </div>
+
+            <div class="videos-container">
+                <h3>Mis Presentaciones Musicales</h3>
+                <div class="tiktok-grid">
+                    <iframe src="https://www.tiktok.com/embed/v2/7538235951642938644" width="325" height="580" frameborder="0" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"></iframe>
+                    <iframe src="https://www.tiktok.com/embed/v2/7519778340694166804" width="325" height="580" frameborder="0" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"></iframe>
+                </div>
+            </div>
         </section>
 
         <section id="criptografia">
@@ -403,5 +445,3 @@
 
 </body>
 </html>
-
-
